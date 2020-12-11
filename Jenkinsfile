@@ -15,7 +15,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-      def app = docker.build registry + ":$BUILD_NUMBER"
+      def app = docker.build registry
     }
 
     stage('Test image') {
