@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-      def app = docker.build('terminator', 'akashsawant/terminator')
+      def app = docker.build "akashsawant/terminator"
     }
 
     stage('Test image') {
