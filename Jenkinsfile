@@ -1,5 +1,5 @@
 node {
-    def app
+    //def app
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("akashsawant/terminator")
+      def app = docker.build('terminator', 'akashsawant/terminator')
     }
 
     stage('Test image') {
