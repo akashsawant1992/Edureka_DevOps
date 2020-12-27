@@ -1,8 +1,8 @@
 node {
-    //def app
-    environment {
-    registry = "akashsawant/terminator"
-    registryCredential = 'docker-hub-credentials'
+    def app
+    //environment {
+    //registry = "akashsawant/terminator"
+   // registryCredential = 'docker-hub-credentials'
   }
 
     stage('Clone repository') {
@@ -15,7 +15,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-      def app = docker.build registry
+       app = docker.build registry ("akashsawant/terminator")
     }
 
     stage('Test image') {
